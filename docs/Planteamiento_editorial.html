@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planteamiento para la Reorganización de EsSalud</title>
+<style>
+:root{--papel:#fbfaf7;--tinta:#232f3a;--navy:#12314a;--oro:#a8842c;--oro2:#c8a959;--hair:#e2dccd;--gris:#5f6b76;--verde:#1e6b5a;--rojo:#8f2f27}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--papel);color:var(--tinta);font-family:'Segoe UI',system-ui,Arial,sans-serif;font-size:10.8pt;line-height:1.62}
+.serif{font-family:Georgia,'Times New Roman',serif}
+.pagina{max-width:820px;margin:0 auto;padding:0 46px}
+p{text-align:justify;margin:0 0 10px}
+a{color:var(--navy);text-decoration:none}
+/* ---------- portada ---------- */
+.portada{background:var(--navy);color:#f4efe4;min-height:96vh;display:flex;flex-direction:column;justify-content:center;padding:70px 60px;position:relative}
+.portada .kicker{font-size:9pt;letter-spacing:.32em;text-transform:uppercase;color:var(--oro2);margin-bottom:26px}
+.portada h1{font-family:Georgia,serif;font-size:33pt;line-height:1.16;font-weight:400;max-width:640px}
+.portada .bajada{font-family:Georgia,serif;font-style:italic;font-size:13pt;color:#cfc6ae;margin-top:22px;max-width:600px;line-height:1.5}
+.portada .filete{width:64px;height:2px;background:var(--oro2);margin:34px 0 26px}
+.portada .firma{font-size:10pt;color:#b9c4cf;line-height:1.7}
+.portada .firma b{color:#fff;font-family:Georgia,serif;font-size:12pt;letter-spacing:.02em}
+.portada .fecha{position:absolute;bottom:44px;left:60px;font-size:9pt;letter-spacing:.22em;text-transform:uppercase;color:#8fa0b0}
+/* ---------- secciones ---------- */
+section{padding:34px 0 6px}
+.enc{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--oro);padding-bottom:8px;margin-bottom:18px}
+.enc .n{font-family:Georgia,serif;font-size:19pt;color:var(--oro)}
+.enc h2{font-family:Georgia,serif;font-size:16.5pt;font-weight:400;color:var(--navy)}
+h3{font-family:Georgia,serif;font-size:12.5pt;font-weight:400;color:var(--navy);margin:20px 0 8px}
+.kicker2{font-size:8.5pt;letter-spacing:.28em;text-transform:uppercase;color:var(--oro);margin-bottom:4px}
+.lead{font-family:Georgia,serif;font-size:11.6pt;color:#3c4a57;line-height:1.6}
+/* pull quote */
+.pull{border-left:2px solid var(--oro2);padding:6px 0 6px 22px;margin:22px 0;font-family:Georgia,serif;font-style:italic;font-size:13pt;line-height:1.55;color:var(--navy)}
+/* tablas */
+table{width:100%;border-collapse:collapse;font-size:9.3pt;margin:12px 0 18px}
+th{font-family:Georgia,serif;font-weight:400;font-size:9.6pt;color:var(--navy);text-align:left;border-top:2px solid var(--oro);border-bottom:1px solid var(--hair);padding:7px 9px}
+td{border-bottom:1px solid var(--hair);padding:7px 9px;vertical-align:top;text-align:left}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:2px solid var(--oro)}
+.rojo{color:var(--rojo);font-weight:600}
+.fuentes{font-size:8.3pt;color:var(--gris);border-top:1px dotted var(--hair);padding-top:8px;margin-top:14px;text-align:justify}
+/* cifras destacadas */
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--oro);border-bottom:1px solid var(--hair);margin:16px 0 20px}
+.cifra{padding:14px 16px 12px;border-right:1px dotted var(--hair)}
+.cifra:last-child{border-right:none}
+.cifra .v{font-family:Georgia,serif;font-size:19pt;color:var(--navy)}
+.cifra .v.mal{color:var(--rojo)}
+.cifra .d{font-size:8.8pt;color:var(--gris);margin-top:3px;line-height:1.45}
+/* listas finas */
+ul.fina{list-style:none;margin:8px 0 14px}
+ul.fina li{padding:7px 0 7px 0;border-bottom:1px dotted var(--hair);text-align:justify}
+ul.fina li b{font-family:Georgia,serif;font-weight:400;color:var(--navy)}
+/* cierre */
+.cierre{background:var(--navy);color:#e9e2d2;padding:40px 46px;margin-top:36px}
+.cierre p{color:#e9e2d2}
+.cierre .firma-f{margin-top:26px;border-top:1px solid rgba(200,169,89,.4);padding-top:16px;font-size:9.5pt;color:#b9c4cf}
+.cierre .firma-f b{font-family:Georgia,serif;font-size:12pt;color:#fff}
+.legal{font-size:8pt;color:#8fa0b0;margin-top:10px}
+/* impresión */
+@page{size:A4;margin:16mm 15mm 18mm}
+@media print{
+ body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .pagina{max-width:none;padding:0 4mm}
+ .portada{min-height:262mm;page-break-after:always}
+ section{page-break-inside:auto}
+ .enc,h3{page-break-after:avoid}
+ tr,.cifra,.pull{page-break-inside:avoid}
+ .cierre{page-break-inside:avoid}
+}
+@media(max-width:720px){.cifras{grid-template-columns:1fr}.pagina{padding:0 20px}.portada{padding:50px 26px}}
+</style>
+</head>
+<body>
+
+<div class="portada">
+ <div class="kicker">Propuesta técnica · Modelo de Excelencia GEMSES</div>
+ <h1>Planteamiento para la Reorganización de EsSalud</h1>
+ <div class="bajada">Del diagnóstico en cifras a la decisión con responsable. Un problema sin dato no entra; un dato que no termina en una decisión con responsable, tampoco.</div>
+ <div class="filete"></div>
+ <div class="firma">
+  <b>Mg. Carlos Pérez Pérez</b><br>
+  Magíster en Gerencia de Proyectos y Programas Sociales<br>
+  Investigador RENACYT · ORCID 0000-0001-8425-1875
+ </div>
+ <div class="fecha">Lima · Agosto de 2026 · Versión 1.0</div>
+</div>
+
+<div class="pagina">
+
+<section>
+ <div class="kicker2">Nota metodológica</div>
+ <div class="enc"><h2>La regla de este documento</h2></div>
+ <p class="lead">Toda cifra de este planteamiento tiene fuente primaria identificada al nivel de documento, página, lámina o artículo, y está registrada en una base de datos verificable — 183 cifras trazadas, nueve fuentes primarias, diecisiete tablas de análisis. Las series financieras, la medición de duplicidad normativa y el índice territorial son reproducibles: los archivos fuente, los umbrales y los programas de cálculo acompañan al documento.</p>
+ <p>Las fuentes centrales son la Evaluación Presupuestal oficial que EsSalud remite al FONAFE (Formato 4E/5E, cierres 2016-2024), el Diagnóstico Situacional presentado por la Presidencia Ejecutiva al Ministerio de Trabajo en noviembre de 2025, el Plan Estratégico Institucional 2026-2030 aprobado por el Consejo Directivo, el texto íntegro y concordado del Reglamento de Organización y Funciones hasta la RPE 1183-PE-ESSALUD-2025, el Libro Blanco EsSalud–Banco Mundial de 2019, los estudios de la Organización Internacional del Trabajo (actuarial 2022, gestión institucional 2024 y encuesta a 20,265 trabajadores), el registro RENIPRESS de SUSALUD y los resultados definitivos de los Censos Nacionales 2025 del INEI.</p>
+</section>
+
+<section>
+ <div class="kicker2">Primera parte</div>
+ <div class="enc"><span class="n">I.</span><h2>El diagnóstico en trece cifras</h2></div>
+ <p class="lead">EsSalud no está quebrada: está sin colchón, sin conteo y sin responsables. Son tres carencias distintas que se refuerzan entre sí, y por eso las reformas parciales fracasaron: el reglamento del nivel central se modificó dieciocho veces desde 2014 —una vez cada 7.3 meses— sin que ningún indicador de resultado cambiara de tendencia. Este planteamiento ataca las tres carencias a la vez.</p>
+
+ <div class="cifras">
+  <div class="cifra"><div class="v mal">1.0 día</div><div class="d">de operación cubre la caja proyectada de 2026; en 2023 cubría 7.4 días. Flujo económico negativo en 2025 y 2026.</div></div>
+  <div class="cifra"><div class="v mal">4.6 millones</div><div class="d">de diferencia entre el padrón institucional (12.76 M) y las personas que declaran afiliación a EsSalud en el Censo 2025 (8.12 M).</div></div>
+  <div class="cifra"><div class="v mal">78.2 %</div><div class="d">de los 87 órganos del ROF no responde por ningún indicador del Plan Estratégico Institucional vigente.</div></div>
+ </div>
+
+ <table>
+  <tr><th style="width:22px">#</th><th style="width:172px">Problema</th><th>La cifra que lo prueba</th><th style="width:168px">Fuente</th></tr>
+  <tr><td>1</td><td>Sin colchón financiero</td><td>Saldo de caja: de 7.4 días de operación (2023) a <span class="rojo">1.0 día en 2026</span>; flujo económico de −S/ 90 MM (2025) y −S/ 105 MM (2026)</td><td>Flujo de caja institucional 2023-2029</td></tr>
+  <tr><td>2</td><td>Resultado real oculto</td><td>Resultado económico <span class="rojo">negativo en 6 de 9 años</span> (2016-2024); el 2024 cerró en cero consumiendo S/ 1,053 MM de ejercicios anteriores</td><td>Formato 4E/5E FONAFE, cierres 2016-2024</td></tr>
+  <tr><td>3</td><td>Dos contabilidades del mismo año</td><td>2024: +S/ 899 MM de superávit en un documento oficial y <span class="rojo">−S/ 186 MM</span> en otro; S/ 1,023 MM de diferencia en el gasto</td><td>Diagnóstico nov-2025 vs Formato 5E</td></tr>
+  <tr><td>4</td><td>Costo unitario fuera de control</td><td>Elasticidad gasto/asegurados = <span class="rojo">2.82</span>; gasto per cápita +15.5 % a 2029</td><td>Cálculo propio sobre la serie oficial</td></tr>
+  <tr><td>5</td><td>Se opera, no se transforma</td><td>Inversión: 3.6 % del gasto, con la peor ejecución del presupuesto (58.4 %); gasto en terceros +70 % sobre el nivel prepandemia</td><td>Ejecución 2025; Formato 4E/5E</td></tr>
+  <tr><td>6</td><td>Brecha de capacidad congelada</td><td>S/ 31,226 MM a 2035; al ritmo del presupuesto 2026 se cierra en <span class="rojo">51.6 años</span></td><td>Libro Blanco 2019 + presupuesto 2026</td></tr>
+  <tr><td>7</td><td>Sin conteo confiable</td><td>401 / 393 / 408 establecimientos según la fuente; padrón de 12.76 M frente a 8.12 M censal: <span class="rojo">4.6 millones en disputa</span></td><td>EsSalud; RENIPRESS; Censo INEI 2025</td></tr>
+  <tr><td>8</td><td>Equipamiento parado</td><td>Solo 20 de 63 tomógrafos rinden por encima del 75 %; equipamiento operativo 40.5 % — y la meta 2030 es 43 %: <span class="rojo">la meta acepta el problema</span></td><td>Diagnóstico institucional; PEI, ficha AEI 1.2.4</td></tr>
+  <tr><td>9</td><td>Personal: brecha tapada</td><td>Brecha de 18,685 plazas (29.4 % de la planilla) cubierta a medias con 9,955 locadores; satisfacción con el clima laboral: <span class="rojo">25 %</span></td><td>Diagnóstico institucional; PEI, ficha OEI 4.1</td></tr>
+  <tr><td>10</td><td>Acceso racionado por espera</td><td>Diferimiento de 25.94 días; <span class="rojo">66.1 %</span> de los pacientes quirúrgicos aptos espera más de 45 días; tamizaje de cáncer de mama en 14.4 % frente a una meta de 35 %</td><td>ESSI oct-2025; PEI, ficha AEI 1.2.3</td></tr>
+  <tr><td>11</td><td>Logística que falta y sobra</td><td>1,539 ítems agotados y <span class="rojo">5,386 en sobrestock</span>, simultáneamente</td><td>Abastecimiento institucional, nov-2025</td></tr>
+  <tr><td>12</td><td>Estructura sin dueño del resultado</td><td>273 pares de funciones solapadas; tres órganos con diez funciones idénticas palabra por palabra; <span class="rojo">78.2 %</span> de los órganos sin indicador</td><td>ROF 2025 × PEI, análisis propio</td></tr>
+  <tr><td>13</td><td>Normas de dos épocas</td><td>ROF central: 9 meses; ROF de redes: mediana de 13 años y nombran gerencias extintas; el ROF tipo de los Policlínicos es <span class="rojo">de 1992 — del IPSS, siete años antes de que EsSalud existiera</span></td><td>Inventario de 21 ROF + OCR propio</td></tr>
+ </table>
+
+ <h3>La convergencia que vuelve esto urgente</h3>
+ <p>Tres diagnósticos independientes, con metodologías distintas, señalan la misma ventana temporal. El Banco Mundial, en el Libro Blanco de 2019, proyectó un déficit operacional creciente hacia 2028. La OIT, en el Estudio Financiero Actuarial 2022, advirtió que incluso aplicando todas las medidas propuestas los déficits reaparecen desde 2026. Y la propia proyección institucional de 2025 muestra el flujo económico en negativo exactamente en 2025-2026, con la caja reducida a un día de operación.</p>
+ <div class="pull">2026 no es una lectura interesada: es la intersección de los tres informes.</div>
+
+ <h3>La prueba de que sí se puede</h3>
+ <p>Cuando la institución midió y priorizó, ejecutó: el desembalse quirúrgico pasó de 32,528 pacientes en lista (noviembre de 2023) a 455 pendientes —el 98.6 %—, con 22 de 29 redes en cero. La capacidad de ejecutar existe. Lo que no existe es el mecanismo que la active de forma permanente. Eso, y no un organigrama nuevo, es lo que este planteamiento instala.</p>
+</section>
+
+<section>
+ <div class="kicker2">Segunda parte</div>
+ <div class="enc"><span class="n">II.</span><h2>El planteamiento en seis ejes</h2></div>
+
+ <h3>Eje 1 · Reorganización estructural: menos órganos, cada uno con un resultado</h3>
+ <ul class="fina">
+  <li><b>De trece gerencias centrales a ocho unidades</b> ordenadas por macroproceso GEMSES: dos estratégicas, tres misionales y tres de soporte.</li>
+  <li><b>Cuatro fusiones inmediatas</b> que la duplicidad literal ya probó: los tres órganos de atención al asegurado (artículos 139, 140 y 141 del ROF, con diez funciones idénticas), las dos gerencias de promoción de inversiones (134 y 135, trece de catorce funciones idénticas), los órganos de control (20, 22 y 24) y la asesoría jurídica (59 y 60). Resultado: seis órganos y seis planillas directivas menos.</li>
+  <li><b>Una sola cascada normativa:</b> ROF central, reglamento tipo de red y reglamento tipo por categoría de establecimiento, aprobados y actualizados juntos. Hoy el centro se reformó dieciocho veces mientras los establecimientos operan con reglamentos tipo de 2007 a 2011 — incluido el de Policlínicos, aprobado por el IPSS en 1992.</li>
+  <li><b>ROF de red real, no plantilla:</b> cada red recibe un anexo con su cartera, dotación y metas; hoy los reglamentos de dos redes comparten al menos el 19 % del texto palabra por palabra. Las cuatro redes prestacionales, sin reglamento propio, entran a la norma con capítulo propio.</li>
+  <li><b>Sin relleno:</b> las obligaciones transversales se escriben una sola vez; hoy una misma cláusula se repite en 47 órganos.</li>
+ </ul>
+
+ <h3>Eje 2 · Jefaturas por resultados: el corazón del planteamiento</h3>
+ <p>La secuencia probatoria es simple. El ROF crea estructura sin responsabilidad: el 21 % de su texto es cláusula repetida. Hay duplicidad literal: cuando tres órganos firman lo mismo, ninguno responde. El 78.2 % de los órganos no tiene resultado medible en el plan estratégico. Y donde se midió y priorizó —el desembalse quirúrgico— se cumplió. La conclusión se impone: <i>la unidad de la reforma no es el organigrama; es el contrato de gestión.</i></p>
+ <ul class="fina">
+  <li><b>Contrato de gestión por jefatura:</b> máximo cinco indicadores, todos con línea de base verificable en el PEI o el ESSI, meta trimestral y consecuencia publicada antes de la evaluación — continuidad, bono o cese.</li>
+  <li><b>Tablero único institucional:</b> una sola fuente de datos alimenta el tablero de todos; se elimina el reporte manual, que hoy es costo y coartada a la vez.</li>
+  <li><b>Designación por concurso</b> y permanencia ganada con el indicador. El contexto lo exige: doce presidentes ejecutivos en cinco años, con rotación gerencial en cascada tras cada relevo.</li>
+  <li><b>Piloto de 180 días</b> en las ocho redes en riesgo crítico del índice territorial, con grupo de comparación: una reforma que no se puede evaluar es indistinguible de una que no funciona.</li>
+ </ul>
+
+ <h3>Eje 3 · El dato como columna vertebral</h3>
+ <p>Tres números demuestran que no existe una sola verdad institucional: tres conteos de establecimientos (401, 393 y 408), dos resultados financieros del mismo año (+899 y −186 millones) y dos universos de asegurados (12.76 millones en el padrón; 8.12 millones que declaran afiliación en el Censo).</p>
+ <ul class="fina">
+  <li><b>Auditoría censal del padrón</b> —cruce padrón × Censo × RENIEC— para resolver los 4.6 millones en disputa. Es la primera decisión porque todo denominador depende de ella. Medida contra quienes se reconocen asegurados, la extensión de uso sube de 52.9 % a cerca de 83 %: el diagnóstico cambia de «la gente no viene» a «el padrón no es real».</li>
+  <li><b>Inventario único</b> de establecimientos, camas y equipos, conciliado con RENIPRESS — hoy solo 301 de 408 IPRESS declaran camas.</li>
+  <li><b>Una sola contabilidad de gestión:</b> conciliación formal y pública entre la ejecución presupuestal y los estados financieros; la línea de ejercicios anteriores deja de amortiguar en silencio.</li>
+  <li><b>Indicador del eje:</b> el propio Índice de Madurez en Gobernanza y Calidad de Datos del PEI — línea de base 0.52 sobre 5.00 — ahora con dueño.</li>
+ </ul>
+
+ <h3>Eje 4 · Desburocratización con evidencia</h3>
+ <p>El registro interno de eventos de seguridad del paciente del primer trimestre de 2025 es la radiografía del problema: de 535 fichas ingresadas se anularon 499 —el 93.3 %—, 453 de ellas por erróneas. Un sistema que descarta nueve de cada diez notificaciones no está midiendo la seguridad del paciente: está midiendo la mala calidad de su propio formulario. Los 36 eventos validados, once de ellos con desenlace de muerte, equivalen a 2.8 por millón de asegurados por trimestre — una tasa que ningún estándar internacional considera verosímil: es subregistro.</p>
+ <ul class="fina">
+  <li><b>Regla de una página:</b> todo formato asistencial que no quepa en una pantalla se rediseña o se elimina; la validación ocurre en el punto de captura, no en la depuración posterior.</li>
+  <li><b>Modelo de ahorro por eliminación de formatos,</b> con caso de referencia hospitalario en validación documental, extrapolable a las 8,966 camas registradas con escenarios pesimista, central y optimista.</li>
+  <li><b>Indicadores del eje:</b> porcentaje de registros válidos al primer intento (línea de base 6.7 %, meta superior a 90 %) y horas asistenciales liberadas de tareas de registro.</li>
+ </ul>
+
+ <h3>Eje 5 · Sostenibilidad financiera: primero eficiencia, luego ingresos</h3>
+ <p>Por el lado del gasto —lo que EsSalud controla sin ninguna ley—: planificación de demanda logística para eliminar la coexistencia de 1,539 ítems agotados con 5,386 en sobrestock; la línea de bonificaciones (S/ 3,160 MM en 2024, el 39.7 % del gasto de personal, +108 % desde 2016) no se recorta a ciegas sino que se condiciona al contrato de gestión — el régimen actual paga igual a quien cumple y a quien no; y la ejecución de gastos de capital, la más baja del presupuesto con 58.4 %, pasa a ser indicador de contrato con la meta del propio PEI: 90 %.</p>
+ <p>Por el lado del ingreso —lo que requiere ley, con el sustento actuarial ya calculado—: los escenarios del Estudio Financiero Actuarial de la OIT aplicados a la proyección institucional suman S/ 3,991 MM adicionales en 2026 (eliminar topes y estandarizar tasas: +7 %; restablecer la cotización sobre gratificaciones: +14 %), equivalentes a 6.6 veces el presupuesto de inversiones de ese año. Y la cobranza: la deuda a favor de EsSalud asciende a S/ 5,327 MM, el 86.7 % ya exigible, con S/ 1,851 MM en manos del propio sector público; se respaldan los tres anteproyectos de ley ya aprobados por el Consejo Directivo.</p>
+
+ <h3>Eje 6 · Tecnología al servicio de los cinco ejes</h3>
+ <p>La tecnología no es un eje aparte: cada sistema se justifica por el problema medido que resuelve — el tablero único por el Eje 2, el padrón auditado y el inventario por el Eje 3, los formularios con validación en captura por el Eje 4, la planificación de demanda por el Eje 5. La regla es una sola: ningún sistema nuevo sin el indicador de negocio al que sirve; la cartera existente de 85 proyectos digitales se filtra con ese criterio.</p>
+</section>
+
+<section>
+ <div class="kicker2">Tercera parte</div>
+ <div class="enc"><span class="n">III.</span><h2>Hoja de ruta y riesgos</h2></div>
+
+ <h3>Primeros cien días — sin cambiar ninguna ley</h3>
+ <table>
+  <tr><th>Acción</th><th>Entregable</th><th>Indicador de cumplimiento</th></tr>
+  <tr><td>Las cuatro fusiones de duplicidad literal</td><td>Una resolución modificatoria</td><td>Seis órganos menos</td></tr>
+  <tr><td>Contratos de gestión en todas las gerencias centrales</td><td>Contratos firmados y publicados</td><td>100 % con indicador</td></tr>
+  <tr><td>Auditoría censal del padrón — fase 1, cruce masivo</td><td>Informe con cifra conciliada</td><td>Brecha de 4.6 millones explicada</td></tr>
+  <tr><td>Conciliación entre ejecución presupuestal y estados financieros 2024</td><td>Informe público</td><td>Una sola cifra oficial 2024</td></tr>
+  <tr><td>Piloto de jefaturas por resultados en las ocho redes críticas</td><td>Línea de base y metas a 180 días</td><td>Evaluación con grupo de comparación</td></tr>
+  <tr><td>Rediseño de los formatos asistenciales críticos</td><td>Formato de una página en el ESSI</td><td>Registros válidos por encima del 60 %</td></tr>
+ </table>
+
+ <h3>Primer año</h3>
+ <p>Reglamento tipo de red con anexos reales por red, en reemplazo de los quince reglamentos de 2007-2018; reglamentos tipo de establecimiento alineados a la categorización de RENIPRESS; tablero único en producción; extensión de los contratos de gestión a todas las jefaturas de red; y presentación de los anteproyectos de ingresos con el sustento actuarial de la OIT.</p>
+
+ <h3>2027-2030</h3>
+ <p>Las metas ya existen — son las del Plan Estratégico Institucional. Lo que cambia es que ahora tienen dueño: diferimiento de quince días; espera quirúrgica mayor a 45 días reducida al 43 %; equipamiento operativo con una meta renegociada por encima del 43 % actual, que consolida el problema; clima laboral en 70 %; ejecución de inversiones en 90 %; madurez de datos en 5.00.</p>
+
+ <h3>Los riesgos del planteamiento, y por qué igual se hace</h3>
+ <table>
+  <tr><th style="width:42%">Riesgo</th><th>Mitigación</th></tr>
+  <tr><td>La rotación de la alta dirección —doce presidentes ejecutivos en cinco años— se lleva la reforma</td><td>Los contratos de gestión y la cascada normativa son resoluciones publicadas: sobreviven al relevo. El piloto rinde evidencia en 180 días, dentro del horizonte de cualquier gestión.</td></tr>
+  <tr><td>Resistencia al régimen de jefaturas por resultados</td><td>El régimen premia con continuidad y bono a quien cumple; es el statu quo el que castiga el buen desempeño pagando S/ 3,160 MM de bonificaciones planas sin evaluación.</td></tr>
+  <tr><td>La auditoría del padrón reduce la cifra oficial de asegurados</td><td>Sincerar el denominador mejora todos los indicadores de uso y focaliza el gasto donde existe derecho real. Se comunica como saneamiento, no como pérdida.</td></tr>
+  <tr><td>Cuestionamiento metodológico a los análisis</td><td>Todo es reproducible: fuentes, programas y umbrales publicados. Cualquier tercero puede repetir el cálculo y llegar al mismo número.</td></tr>
+ </table>
+
+ <div class="pull">Una reforma que no se puede evaluar es indistinguible de una que no funciona. Por eso cada pieza de este planteamiento nace con su línea de base, su meta y su responsable.</div>
+
+ <p class="fuentes">Fuentes: EsSalud, Evaluación Presupuestal Formato 4E/5E remitida al FONAFE, cierres 2016-2024 · EsSalud, Diagnóstico Situacional presentado al MTPE, noviembre de 2025 · EsSalud, Plan Estratégico Institucional 2026-2030 (Acuerdo de Consejo Directivo 11-12E-ESSALUD-2025) · EsSalud, Reglamento de Organización y Funciones, texto concordado hasta la RPE 1183-PE-ESSALUD-2025, y colecciones oficiales de reglamentos desconcentrados y de establecimientos · EsSalud / Banco Mundial, Libro Blanco, 2019 · OIT, Estudio Financiero Actuarial 2022; Evaluación de la gestión institucional, 2024; Opiniones, percepciones y valoraciones de los trabajadores, 2024 · SUSALUD, RENIPRESS · INEI, Censos Nacionales 2025 · CGR, INCO 2024 · Fitch Ratings, noviembre de 2025. El detalle con enlace por dato está en el portal del proyecto.</p>
+</section>
+
+</div>
+
+<div class="cierre">
+ <div class="pagina" style="padding:0">
+  <div class="kicker2" style="color:var(--oro2)">Cierre</div>
+  <p class="lead" style="color:#e9e2d2">Los planteamientos que hoy circulan sobre EsSalud aciertan mayoritariamente en la tesis y fallan en la evidencia: cifras sin fuente, datos de gestiones pasadas y propuestas sin costo ni responsable. Este planteamiento se para en el mismo problema con otra base — 183 cifras trazadas a su documento de origen, veintiún reglamentos descargados y medidos, treinta y nueve indicadores oficiales cargados con sus líneas de base — y una regla que no se negocia: un problema sin dato no entra; un dato que no termina en una decisión con responsable, tampoco.</p>
+  <div class="firma-f">
+   <b>Mg. Carlos Pérez Pérez</b><br>
+   Magíster en Gerencia de Proyectos y Programas Sociales · Investigador RENACYT<br>
+   ORCID 0000-0001-8425-1875 · carlosperez100@gmail.com
+   <div class="legal">Documento técnico independiente elaborado con el Modelo de Excelencia GEMSES (patente PE324096539). No constituye una publicación oficial de EsSalud. Portal del proyecto: carlosperez100.github.io/essalud-reorganizacion</div>
+  </div>
+ </div>
+</div>
+
+</body>
+</html>
